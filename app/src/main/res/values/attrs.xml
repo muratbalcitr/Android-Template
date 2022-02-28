@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Toolbar">
+        <attr name="left_icon" format="reference" />
+        <attr name="title_text" format="string" />
+        <attr name="spot_text" format="string" />
+        <attr name="right_image" format="reference" />
+        <attr name="right_left_image" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="StoriesProgressView">
+        <attr name="progressCount" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomLeftMenu">
+        <attr name="blm_itemTextColor" format="color" />
+        <attr name="blm_itemTextSize" format="dimension" />
+        <attr name="blm_itemNormalStateColor" format="color" />
+        <attr name="blm_itemPressedStateColor" format="color" />
+        <attr name="blm_showDivider" format="boolean" />
+        <attr name="blm_dividerHeight" format="dimension" />
+        <attr name="blm_dividerColor" format="color" />
+        <attr name="blm_openCloseAnimation">
+            <enum name="bottom_top" value="0" />
+            <enum name="left_right" value="1" />
+            <enum name="fade_in" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

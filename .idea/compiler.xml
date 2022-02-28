@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="MovieDb.route-core.commonMain" target="1.8" />
+      <module name="MovieDb.route-core.commonTest" target="1.8" />
+      <module name="MovieDb.route-core.jvmMain" target="1.8" />
+      <module name="MovieDb.route-core.jvmTest" target="1.8" />
+      <module name="Namaz_Vakti.route-core.commonMain" target="1.8" />
+      <module name="Namaz_Vakti.route-core.commonTest" target="1.8" />
+      <module name="Namaz_Vakti.route-core.jvmMain" target="1.8" />
+      <module name="Namaz_Vakti.route-core.jvmTest" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

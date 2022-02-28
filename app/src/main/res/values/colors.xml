@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="colorPrimary">#32B297</color>
+    <color name="colorPrimaryVariant">#2A9E85</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#F52367</color>
+    <color name="colorSecondaryVariant">#FF018786</color>
+    <color name="colorOnSecondary">#FFFFFFFF</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="main_text">#333333</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="grey1">#F2F2F2</color>
+    <color name="grey2">#E0E0E0</color>
+    <color name="grey3">#BDBDBD</color>
+    <color name="grey4">#828282</color>
+    <color name="grey5">#4F4F4F</color>
+    <color name="grey6">#333333</color>
+
+    <color name="progress_primary">@color/white</color>
+    <color name="progress_secondary">@color/gray_scale</color>
+    <color name="progress_max_active">@color/white</color>
+    <color name="gray_scale">#8affffff</color>
+
+    <color name="primary">#32B297</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_color">#F3F2F7</color>
+    <color name="bg_color_2">#4C7BB1</color>
+    <color name="bg_color_3">#8C4BB4</color>
+    <color name="bg_color_4">#D49F36</color>
+    <color name="bg_color_5">#D36D73</color>
+    <color name="bg_color_6">#5EB648</color>
+    <color name="bg_color_7">#934CBF</color>
+    <color name="bg_color_8">#BBBE2F</color>
+    <color name="bg_color_9">#6F9CA3</color>
+    <color name="bg_color_10">#686199</color>
+    <color name="bg_color_11">#C8835D</color>
+    <color name="bg_color_12">#81AE37</color>
+    <color name="bg_color_13">#BBBE2F</color>
+    <color name="bg_color_14">#6F9CA3</color>
+    <color name="bg_color_15">#1E96BC</color>
+    <color name="bg_color_16">#C09B3C</color>
+    <color name="bg_color_17">#DC5353</color>
+    <color name="bg_color_18">#14A9A9</color>
+    <color name="green">#34C759</color>
+    <color name="bg_color_19">#0078F7</color>
+    <color name="quran_point">#B59859</color>
+    <color name="default_divider_color">#EBE9E9</color>
+
+
+    <color name="shadow_01">#01360000</color>
+    <color name="shadow_02">#02CCD0E0</color>
+    <color name="shadow_03">#03CCD0E0</color>
+    <color name="shadow_04">#04CCD0E0</color>
+    <color name="shadow_05">#05CCD0E0</color>
+    <color name="shadow_06">#06CCD0E0</color>
+    <color name="shadow_07">#07CCD0E0</color>
+    <color name="shadow_08">#08CCD0E0</color>
+    <color name="shadow_09">#09CCD0E0</color>
+    <color name="shadow_10">#10CCD0E0</color>
+    <color name="shadow_11">#11CCD0E0</color>
+    <color name="shadow_12">#12CCD0E0</color>
+    <color name="shadow_13">#13CCD0E0</color>
+    <color name="colorLightGrey">#333333</color>
+    <color name="icon_unselected">#85F2F2F2</color>
+    <color name="color1">#A5A6F6</color>
+    <color name="color2">#FFFCD4</color>
+    <color name="fushia60">#FCDDEC</color>
+    <color name="color3">#EBC9FF</color>
+    <color name="color4">#C8C9FF</color>
+
+    <!--DISPLAY COLORS-->
+    <color name="dis_1">#ffffff</color>
+    <color name="dis_2">#E3DCD2</color>
+    <color name="dis_3">#FCF5E5</color>
+    <color name="dis_4">#F0DCA1</color>
+    <color name="dis_5">#EADAB9</color>
+    <color name="dis_6">#F9FAE0</color>
+    <color name="halftrans_black">#8000</color>
+</resources>

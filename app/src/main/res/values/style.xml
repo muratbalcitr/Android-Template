@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <!-- Typography -->
+
+    <style name="TextStyle4">
+         <item name="android:textSize">@dimen/text_size_4</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:lineSpacingMultiplier">1.12</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+    <style name="TextStyle3">
+         <item name="android:textSize">@dimen/text_size_3</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:lineSpacingMultiplier">1.12</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+
+    <style name="TextStyle2">
+         <item name="android:textSize">@dimen/text_size_2</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:lineSpacingMultiplier">1.17</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+    <style name="TextStyle1">
+         <item name="android:textSize">@dimen/text_size_1</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+    <style name="TextStyle0">
+         <item name="android:textSize">@dimen/text_size_0</item>
+        <item name="android:textColor">@color/main_text</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+
+</resources>

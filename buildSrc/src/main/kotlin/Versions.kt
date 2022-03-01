@@ -66,43 +66,20 @@ object Versions {
         const val okHttp = "4.9.1"
         const val loggingInterceptor = okHttp
     }
-
-    object Security {
-        const val crypto = "1.0.0"
-    }
-
     object Tools {
-        const val jodaTime = "2.10.5"
-        const val workManagerRuntime = "2.5.0"
         const val timber = "4.7.1"
-        const val glide = "4.12.0"
-        const val lottie = "3.7.0"
+         const val lottie = "3.7.0"
         const val coil = "1.4.0"
         const val storyView = "1.0.2-alpha"
         const val roundedImageView = "2.3.0"
-        const val circleIndicator = "2.1.6"
-        const val whynotimagecarousel = "2.0.6"
-        const val dotsIndicator = "2.1.6"
-        const val materialSearchBar = "0.8.5"
+         const val whynotimagecarousel = "2.0.6"
+         const val materialSearchBar = "0.8.5"
     }
 
     object Dialogs {
         const val core = "3.0.0"
     }
 
-    object Room {
-        const val roomVersion = "2.3.0"
-    }
-
-    object Huawei {
-        const val huaweiLocation = "5.0.2.301"
-    }
-
-    object Firebase {
-        /**
-        [Todo Firebase Lib.]
-         **/
-    }
 
     object Test {
         const val junit = "4.+"

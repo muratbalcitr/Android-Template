@@ -10,12 +10,6 @@ object Dependencies {
         const val kotlinCoroutinesAndroid =
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.Kotlin.kotlinCoroutinesCore}"
 
-        object StdLib {
-            const val common =
-                "org.jetbrains.kotlin:kotlin-stdlib-common:${Versions.Kotlin.kotlinVersion}"
-            const val jdk =
-                "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.Kotlin.kotlinVersion}"
-        }
 
         object Test {
             const val common =

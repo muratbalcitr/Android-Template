@@ -1,8 +1,6 @@
 object Flavors {
     object ProductFlavors {
         const val DEV = "dev"
-        const val UAT = "uat"
-        const val PILOT = "pilot"
         const val STORE = "store"
     }
 

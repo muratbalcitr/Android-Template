@@ -7,12 +7,12 @@
 <h5><b>With the Kotlin-DSL structure, the data and buildSrc parts were separated from each other and a more fluid structure was obtained.</b></h5>
 
 <div class="myDiv">
-  <h6>#MVVM</h6>
-  <h6>#Kotlin</h6> 
-  <h6>#RxJava</h6> 
-  <h6>#Dagger</h6> 
-  <h6>#Hilt</h6> 
-  <h6>#DSL</h6> 
-  <h6>#Kotlin-DSL</h6> 
+  #MVVM 
+  #Kotlin 
+  #RxJava  
+  #Dagger 
+  #Hilt 
+  #DSL 
+  #Kotlin-DSL 
 </div>
 <a href="https://www.linkedin.com/in/muratbalci1/">Visit My Linkedin</a>

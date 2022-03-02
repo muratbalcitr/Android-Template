@@ -2,11 +2,13 @@ package com.m2lifeApps.movieDb.features.main.domain
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.m2lifeApps.data.Status
+import androidx.lifecycle.viewModelScope
+import com.m2lifeApps.data.Result
 import com.m2lifeApps.data.remote.response.PopularMoviesResponse
 import com.m2lifeApps.movieDb.core.extensions.Event
 import com.m2lifeApps.movieDb.core.platform.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,14 +23,12 @@ class MainViewModel @Inject constructor(
     val event: LiveData<Event<MainViewEvent>> = _event
 
     fun fetchPopulars() {
-        val response = useCase.fetchPopular()
-        response.subscribe {
-            when (it.status) {
-                Status.SUCCESS -> {
-                    _popular.postValue(it.data)
-                }
-                Status.ERROR -> handleException(Exception(it.error))
-            }
+        viewModelScope.launch {
+            val response = useCase.fetchPopular()
+            when (response) {
+                is Result.Success -> _popular.postValue(response.data)
+                is Result.Error -> handleException(response.exception)
+            }.also { setLoading(false) }
         }
     }
 

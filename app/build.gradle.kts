@@ -45,7 +45,7 @@ android {
             isMinifyEnabled = false
             isDebuggable = true
             applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
-            signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
+            //signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
         }
 
         getByName(Flavors.BuildTypes.RELEASE) {
@@ -54,7 +54,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
+        // signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
         }
     }
 
@@ -172,10 +172,10 @@ dependencies {
     kapt(Dependencies.DI.hiltWorkManagerCompiler)
     annotationProcessor(Dependencies.DI.hiltWorkManagerCompiler)
 
-    // ReactiveFunc
+    /*// ReactiveFunc
     implementation(Dependencies.ReactiveFunc.rxJava)
     implementation(Dependencies.ReactiveFunc.rxKotlin)
-    implementation(Dependencies.ReactiveFunc.rxAndroid)
+    implementation(Dependencies.ReactiveFunc.rxAndroid)*/
 
     // Timber
     implementation(Dependencies.Tools.timber)

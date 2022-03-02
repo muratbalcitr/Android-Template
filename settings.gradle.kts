@@ -1,6 +1,6 @@
 include(":app")
 include(":data")
-rootProject.name = "MovieDb"
+rootProject.name = "Android Base"
 
 rootProject.buildFileName = "build.gradle.kts"
 

@@ -58,9 +58,9 @@ dependencies {
     // DI
     api(Dependencies.DI.hilt)
     kapt(Dependencies.DI.hiltCompiler)
-
+/*
     // ReactiveFunc
-    api(Dependencies.ReactiveFunc.rxJava)
+    api(Dependencies.ReactiveFunc.rxJava)*/
 
     // Timber
     api(Dependencies.Tools.timber)

@@ -1,17 +1,20 @@
 package com.m2lifeApps.data.repository
 
-import com.m2lifeApps.data.Resource
+import androidx.annotation.VisibleForTesting
+import com.m2lifeApps.data.Result
+import com.m2lifeApps.data.remote.ProjectService
 import com.m2lifeApps.data.remote.response.PopularMoviesResponse
-import com.m2lifeApps.data.util.toObservable
-import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 class ApiRepository @Inject constructor(
-    private val apiDataSource: ApiDataSource
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    private val service: ApiDataSource
 ) {
-    fun fetchPopular(): Observable<Resource<PopularMoviesResponse>> {
-        return Observable.create { emitter ->
-            apiDataSource.fetchPopular().toObservable(emitter)
+    suspend fun fetchPopular(): Result<PopularMoviesResponse> {
+        return try {
+            Result.Success(service.fetchPopular())
+        } catch (exception: Exception) {
+            Result.Error(exception)
         }
     }
 }

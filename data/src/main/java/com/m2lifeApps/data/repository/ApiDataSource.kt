@@ -7,5 +7,5 @@ class ApiDataSource @Inject constructor(
     private val projectService: ProjectService
 ) {
 
-    fun fetchPopular() = projectService.fetchPopular()
+    suspend fun fetchPopular() = projectService.fetchPopular()
 }

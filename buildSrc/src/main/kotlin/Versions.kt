@@ -63,6 +63,8 @@ object Versions {
         const val retrofit = "2.9.0"
         const val rxJava3Adapter = retrofit
         const val gsonConverter = retrofit
+        const val moshi = retrofit
+        const val moshiKotlin = "1.11.0"
         const val okHttp = "4.9.1"
         const val loggingInterceptor = okHttp
     }

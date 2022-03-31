@@ -1,13 +1,12 @@
 package com.m2lifeApps.data.remote.response
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class ApiError(
-    @SerializedName("status_message")
+    @Json(name = "status_message")
     val statusMessage: String,
-    @SerializedName("success")
+    @Json(name = "success")
     val isSuccess: Boolean,
-    @SerializedName("status_code")
-    val statusCode: Int,
-
+    @Json(name = "status_code")
+    val statusCode: Int
 )

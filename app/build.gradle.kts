@@ -45,7 +45,7 @@ android {
             isMinifyEnabled = false
             isDebuggable = true
             applicationIdSuffix = ".${Flavors.BuildTypes.DEBUG}"
-            //signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
+            // signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
         }
 
         getByName(Flavors.BuildTypes.RELEASE) {
@@ -54,7 +54,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        // signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
+            // signingConfig = signingConfigs.getByName(Flavors.BuildTypes.RELEASE)
         }
     }
 
@@ -186,8 +186,8 @@ dependencies {
     implementation(Dependencies.Tools.lottie)
 
     // Network
-    implementation(Dependencies.Network.gson)
-    implementation(Dependencies.Network.gsonAdapter)
+    implementation(Dependencies.Network.moshi)
+    implementation(Dependencies.Network.moshiKotlin)
     implementation(Dependencies.Network.retrofit)
     implementation(Dependencies.Network.rxJavaAdapter)
     implementation(Dependencies.Network.okHttp)
@@ -196,10 +196,9 @@ dependencies {
 
     // TOOLS
 
-     implementation(Dependencies.Tools.roundedImageView)
-     implementation(Dependencies.Tools.materialSearchBar)
+    implementation(Dependencies.Tools.roundedImageView)
+    implementation(Dependencies.Tools.materialSearchBar)
     implementation(Dependencies.Tools.whynotimagecarousel)
-
 
     // Dialog
     implementation(Dependencies.Dialogs.dialogCore)

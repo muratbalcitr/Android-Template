@@ -1,12 +1,16 @@
 package com.m2lifeApps.movieDb.core.di
 
 import android.content.Context
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.m2lifeApps.data.remote.APIKEY
-import com.m2lifeApps.movieDb.BuildConfig
-import com.m2lifeApps.movieDb.core.di.qualifers.*
-import com.m2lifeApps.movieDb.core.network.NetworkController
-import com.m2lifeApps.movieDb.core.network.*
 import com.m2lifeApps.data.remote.ProjectService
+import com.m2lifeApps.movieDb.BuildConfig
+import com.m2lifeApps.movieDb.core.di.qualifers.DefaultOkHttpClientBuilder
+import com.m2lifeApps.movieDb.core.di.qualifers.ProjectOkHttpClient
+import com.m2lifeApps.movieDb.core.di.qualifers.ProjectRetrofit
+import com.m2lifeApps.movieDb.core.network.*
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,8 +19,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -30,15 +33,19 @@ class NetworkModule {
         @ProjectRetrofit projectRetrofit: Retrofit
     ): ProjectService = projectRetrofit.create(ProjectService::class.java)
 
-
     @ProjectRetrofit
     @Provides
     fun provideProjectRetrofit(
         @ProjectOkHttpClient projectOkHttpClient: OkHttpClient
     ): Retrofit = Retrofit.Builder().apply {
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+
         baseUrl(BuildConfig.SERVICE_URL)
-        addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-        addConverterFactory(GsonConverterFactory.create())
+
+        addConverterFactory(MoshiConverterFactory.create(moshi))
+        addCallAdapterFactory(CoroutineCallAdapterFactory())
         client(projectOkHttpClient)
     }.build()
 
@@ -48,8 +55,6 @@ class NetworkModule {
         @DefaultOkHttpClientBuilder okHttpClientBuilder: OkHttpClient.Builder,
         @ApplicationContext context: Context
     ) = okHttpClientBuilder.apply {
-
-
     }.build()
 
     @Provides
@@ -72,10 +77,8 @@ class NetworkModule {
         @ApplicationContext context: Context,
     ) = NetworkController(context)
 
-
     @Provides
     @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor()
         .setLevel(HttpLoggingInterceptor.Level.BODY)
-
 }

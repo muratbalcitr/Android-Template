@@ -46,14 +46,13 @@ dependencies {
     implementation(Dependencies.Android.androidCore)
 
     // Network
-    api(Dependencies.Network.gson)
-    api(Dependencies.Network.gsonAdapter)
+    api(Dependencies.Network.moshi)
+    api(Dependencies.Network.moshiKotlin)
     api(Dependencies.Network.retrofit)
     api(Dependencies.Network.rxJavaAdapter)
     api(Dependencies.Network.okHttp)
     api(Dependencies.Network.loggingInterceptor)
     api(Dependencies.Network.conscrypt)
-
 
     // DI
     api(Dependencies.DI.hilt)
@@ -65,7 +64,7 @@ dependencies {
     // Timber
     api(Dependencies.Tools.timber)
 
-    //Testing
+    // Testing
     testImplementation(Dependencies.Test.junit)
     androidTestImplementation(Dependencies.Test.androidJunit)
     androidTestImplementation(Dependencies.Test.espressoCore)

@@ -17,10 +17,10 @@ fun RoundedImageView.loadImage(url: Any?) {
 
 @BindingAdapter("app:imageUrlPost")
 fun AppCompatImageView.loadImagePost(url: Any?) {
-    this.loadAny("https://api.themoviedb.org/$url")
+    this.loadAny("https://image.tmdb.org/t/p/w500$url")
 }
 
 @BindingAdapter("app:imageUrlPost")
 fun RoundedImageView.loadImagePost(url: Any?) {
-    this.loadAny("https://api.themoviedb.org/$url")
+    this.loadAny("https://image.tmdb.org/t/p/w500$url")
 }

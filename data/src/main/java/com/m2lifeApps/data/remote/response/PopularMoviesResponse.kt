@@ -1,45 +1,45 @@
 package com.m2lifeApps.data.remote.response
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
 
 data class PopularMoviesResponse(
-    @SerializedName("page")
+    @Json(name = "page")
     var page: Int?,
-    @SerializedName("results")
+    @Json(name = "results")
     var results: List<Result?>?,
-    @SerializedName("total_pages")
+    @Json(name = "total_pages")
     var totalPages: Int?,
-    @SerializedName("total_results")
+    @Json(name = "total_results")
     var totalResults: Int?
 ) {
     data class Result(
-        @SerializedName("adult")
+        @Json(name = "adult")
         var adult: Boolean?,
-        @SerializedName("backdrop_path")
+        @Json(name = "backdrop_path")
         var backdropPath: String?,
-        @SerializedName("genre_ids")
+        @Json(name = "genre_ids")
         var genreIds: List<Int?>?,
-        @SerializedName("id")
+        @Json(name = "id")
         var id: Int?,
-        @SerializedName("original_language")
+        @Json(name = "original_language")
         var originalLanguage: String?,
-        @SerializedName("original_title")
+        @Json(name = "original_title")
         var originalTitle: String?,
-        @SerializedName("overview")
+        @Json(name = "overview")
         var overview: String?,
-        @SerializedName("popularity")
+        @Json(name = "popularity")
         var popularity: Double?,
-        @SerializedName("poster_path")
+        @Json(name = "poster_path")
         var posterPath: String?,
-        @SerializedName("release_date")
+        @Json(name = "release_date")
         var releaseDate: String?,
-        @SerializedName("title")
+        @Json(name = "title")
         var title: String?,
-        @SerializedName("video")
+        @Json(name = "video")
         var video: Boolean?,
-        @SerializedName("vote_average")
+        @Json(name = "vote_average")
         var voteAverage: Double?,
-        @SerializedName("vote_count")
+        @Json(name = "vote_count")
         var voteCount: Int?
     )
 }
